@@ -19,8 +19,8 @@ jobs:
       - uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: warss78
-          password: 759153adem
+          username: warss7878
+          password: 759153Adem
       - uses: docker/build-push-action@v2
         with:
           context: ./
