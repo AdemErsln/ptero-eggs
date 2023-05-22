@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM php:8.0-fpm-alpine
 
 RUN apk --update --no-cache add curl ca-certificates nginx
 RUN apk add --no-cache \
@@ -35,6 +35,10 @@ RUN apk add --no-cache \
     php8-mbstring \
     php8-tokenizer \
     php8-simplexml
+
+FROM alpine:latest
+
+
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
