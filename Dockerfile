@@ -1,7 +1,7 @@
 FROM php:8.0-fpm-alpine
 
 RUN apk --no-cache add curl ca-certificates nginx git \
-    && docker-php-ext-install pdo_mysql mysqli
+    && docker-php-ext-install pdo_mysql mysqli php8-mysqli
 
 RUN apk add --no-cache php8-fpm
 
