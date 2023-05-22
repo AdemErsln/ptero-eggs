@@ -1,7 +1,8 @@
 FROM php:8.0-fpm-alpine
 
 RUN apk --no-cache add curl ca-certificates nginx git \
-    && docker-php-ext-install pdo_mysql
+    && docker-php-ext-install pdo_mysql mysqli
+
 RUN apk add --no-cache php8-fpm
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
