@@ -4,8 +4,6 @@ FROM php:8.0-fpm-alpine
 # Gerekli paketleri yükleyin
 RUN apk --no-cache add curl ca-certificates nginx git
 
-# Nginx yapılandırması
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Tüm PHP eklentilerini yükleyin
 RUN apk add --no-cache \
