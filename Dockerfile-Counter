@@ -1,0 +1,18 @@
+# İmage olarak kullanacağımız temel CS sunucusu imajını alın
+FROM cm2network/steamcmd:root
+
+# Gerekli bağımlılıkları yükleyin
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends lib32gcc1 ca-certificates libc6-arm64-cross
+
+USER container
+ENV  USER container
+ENV HOME /home/container
+
+
+WORKDIR /home/container
+COPY ./entrypoint.sh /entrypoint.sh
+
+
+CMD ["/bin/ash", "/entrypoint.sh"]
