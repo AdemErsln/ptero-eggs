@@ -1,5 +1,5 @@
 # İmage olarak kullanacağımız temel CS 1.6 sunucusu imajını alın
-FROM cm2network/steamcmd:root
+FROM ubuntu
 
 # Gerekli bağımlılıkları yükleyin
 RUN apt-get update && \
