@@ -7,7 +7,7 @@ on:
     branches:
       - master
     paths:
-      - python/**
+      - nginx/**
 jobs:
   push:
     name: "yolks:python_${{ matrix.tag }}"
